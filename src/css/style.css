@@ -1,0 +1,614 @@
+/* 
+selector - class(.으로 구분), ID(#으로 구분해서 사용), HTML tag(element), parent->kid
+class와 ID를 사용하는 게 가장 빠르다.
+
+명명규칙 : header__naming
+변수/상수 : --color-black : #ffffff
+*/
+
+/* 
+GLOBAL
+*/
+:root {
+  /* App Color */
+  --color-primary: var(--color-black);
+  --color-accent: var(--color-blue);
+  --color-text: var(--color-white);
+
+  /* color list */
+  --color-white: #ffffff;
+  --color-black: #050a13;
+  --color-blue: #0077ff;
+  --color-orange: #fd5113;
+  --color-gray: #1b1e26;
+
+  /* size */
+  --max-size-width: 1200px;
+}
+
+/* commons */
+* {
+  box-sizing: border-box;
+  font-family: "Kelly Slab", sans-serif;
+}
+
+body {
+  /* Font-Type */
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+button:focus {
+  outline: 1px solid var(--color-accent);
+}
+.max-container {
+  max-width: var(--max-size-width);
+  margin: auto;
+  /* border: 1px solid tomato; */
+}
+.section {
+  padding: 4rem;
+  text-align: center;
+}
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.description {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* header */
+
+.header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__logo__img {
+  width: 36px;
+  height: 36px;
+}
+
+.header__logo__title {
+  font-size: 1.8rem;
+  color: var(--color-text);
+}
+
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+
+.header__menu__item {
+  color: var(--color-text);
+  padding: 8px 16px;
+}
+
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu > li:first-child a {
+  border: 1px solid var(--color-accent);
+  border-radius: 5px;
+}
+
+.header__toggle {
+  display: none;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+}
+
+/* main */
+
+/* home */
+
+#home {
+  background-color: var(--color-gray);
+  color: white;
+  padding: 5rem 1rem;
+  padding-top: 7rem;
+  text-align: center;
+}
+.home__avatar {
+  width: 200px;
+  height: 200px;
+  border: 5px solid var(--color-accent);
+  border-radius: 100%;
+  object-fit: cover; /* 원래 이미지 비율 유지 */
+}
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home__title--strong {
+  color: var(--color-accent);
+}
+.home__description {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+.home__contact {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  margin: 1.5rem;
+  font-weight: bold;
+}
+.home__contact:hover {
+  background-color: transparent;
+  outline: 2px solid var(--color-accent);
+  color: var(--color-white);
+}
+
+/* about */
+.majors {
+  /* border: 1px solid tomato; */
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+.major {
+  /* border: 1px solid gold; */
+  background-color: var(--color-gray);
+  color: var(--color-text);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  cursor: default;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.major__icon {
+  font-size: 4rem;
+  color: var(--color-accent);
+  margin: 1rem 0;
+  transition: all 300ms ease;
+}
+
+.major:hover .major__icon {
+  color: var(--color-orange);
+  transform: rotate(-15deg) scale(1.2);
+}
+.major:hover .major__title {
+  color: var(--color-orange);
+  transform: scale(1.2);
+}
+.major:hover .major__description {
+  transform: scale(0.6);
+  color: var(--color-accent);
+}
+
+.major__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.jobs {
+  /* border: 1px solid red; */
+  text-align: start;
+}
+
+.job {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.job__name {
+  color: var(--color-primary);
+  font-size: 1.5 rem;
+}
+.job__period {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+/* my skills */
+#skill {
+  background-color: var(--color-gray);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.skills {
+  /* border: 1px solid tomato; */
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 26px 13px rgba(0, 0, 0, 0.75);
+}
+.skill__title {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.skills__coding {
+  /* border: 1px solid tomato; */
+  grid-row: span 2;
+  background-color: var(--color-primary);
+  padding: 1rem;
+  margin: 1rem;
+}
+.skills__tools {
+  background-color: var(--color-primary);
+  filter: brightness(150%);
+  padding: 1rem;
+  margin: 1rem;
+}
+.skills__etc {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%);
+  margin: 1rem;
+}
+
+.bar {
+  /* border: 1px solid tomato; */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.bar__metadata {
+  display: flex;
+  justify-content: space-between;
+}
+.bar__bg {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-gray);
+}
+.bar__value {
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+/* my work */
+
+#work {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.categories {
+  /* border: 1px solid yellow; */
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+  gap: 1rem;
+}
+
+.category {
+  position: relative;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  padding: 0.5rem 3rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.categories > li:first-child > button {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.category__count {
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  opacity: 0;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 100%;
+  background-color: var(--color-orange);
+  color: var(--color-text);
+  transition: all 250ms ease-in;
+}
+.categories > li:first-child > button .category__count,
+.category:hover .category__count {
+  opacity: 1;
+  top: 5px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.project {
+  position: relative;
+  overflow: hidden;
+}
+.project__img {
+  width: 100%;
+  border-radius: 8px;
+}
+.project__description {
+  /*   border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  opacity: 0;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project:hover .project__description {
+  opacity: 0.7;
+}
+.project:hover .project__img {
+  transform: scale(1.5);
+  transition: 2000ms;
+}
+
+.project__description__title::after {
+  /* div형태로 만들어짐 */
+  width: 50px;
+  height: 2px;
+  content: "";
+  display: block;
+  background-color: var(--color-accent);
+  position: relative;
+  left: 50%;
+  margin: 0.8rem 0;
+  transform: translateX(-50%);
+}
+
+/* testimonials */
+
+.testimonials {
+  margin: 3rem;
+}
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.testimonial:nth-child(even) .testimonial__img {
+  order: 1;
+}
+.testimonial__img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.75);
+}
+.testimonial__bubble {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.75);
+}
+.testimonial__bubble__name {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--color-accent);
+  filter: brightness(70%);
+}
+
+/* arrow */
+.arrow--up {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  color: var(--color-text);
+  font-size: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 0px 0px var(--color-accent);
+  background-color: var(--color-primary);
+}
+
+/* footer */
+#contact {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.contact__link {
+  color: var(--color-text);
+}
+.contact__link:hover {
+  color: var(--color-accent);
+}
+
+/***********************************************
+media - 768 X 1024
+**********************************************/
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3rem 2rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .header__toggle {
+    display: block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  #home {
+    padding-bottom: 3rem;
+  }
+  .home__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .majors {
+    flex-direction: column;
+    align-items: center;
+  }
+  .major {
+    width: 35rem;
+  }
+  .job {
+    justify-content: center;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+  }
+  .categories {
+    flex-direction: column;
+  }
+  .category {
+    width: 100%;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonial {
+    flex-direction: column;
+  }
+  .testimonial:nth-child(even) .testimonial__img {
+    order: 0;
+  }
+  .arrow--up {
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+} /* media screen */
+
+/***********************************************
+media - 412 X 915 (gal s20 기준)
+**********************************************/
+@media screen and (max-width: 412px) {
+  .section {
+    padding: 1.5rem 1rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.7rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .header__toggle {
+    display: block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  #home {
+    padding-bottom: 1.5rem;
+  }
+  .home__title {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .majors {
+    flex-direction: column;
+    align-items: center;
+  }
+  .major {
+    width: 16rem;
+  }
+  .job {
+    justify-content: center;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+  }
+  .categories {
+    flex-direction: column;
+  }
+  .category {
+    width: 100%;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .testimonial {
+    flex-direction: column;
+  }
+  .testimonial:nth-child(even) .testimonial__img {
+    order: 0;
+  }
+  .arrow--up {
+    bottom: 0.7rem;
+    right: 1rem;
+    font-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

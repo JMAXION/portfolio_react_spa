@@ -1,0 +1,25 @@
+{
+  "testimonialList": [
+    {
+      "image": "img/testimonials/kabo-BHJs5TZ-Nt0-unsplash.jpg",
+      "meta": "people1",
+      "bubble": "Lorem ipsum dolor sit amet consectetur adipisicing elit.\n  Deserunt molestias exercitationem dolorum, recusandae \nperspiciatis quos quas. In unde ab explicabo delectus, optio \n  quasi, odit quam culpa officiis esse labore mollitia.",
+      "name": "James Kim",
+      "company": "Google"
+    },
+    {
+      "image": "img/testimonials/kote-puerto-so5nsYDOdxw-unsplash.jpg",
+      "meta": "people2",
+      "bubble": "Lorem ipsum dolor sit amet consectetur adipisicing elit.\n  Deserunt molestias exercitationem dolorum, recusandae \nperspiciatis quos quas. In unde ab explicabo delectus, optio \n  quasi, odit quam culpa officiis esse labore mollitia.",
+      "name": "Smith Park",
+      "company": "Samsung"
+    },
+    {
+      "image": "img/testimonials/cedric-vt-IuJc2qh2TcA-unsplash.jpg",
+      "meta": "people3",
+      "bubble": "Lorem ipsum dolor sit amet consectetur adipisicing elit.\n  Deserunt molestias exercitationem dolorum, recusandae \nperspiciatis quos quas. In unde ab explicabo delectus, optio \n  quasi, odit quam culpa officiis esse labore mollitia.",
+      "name": "Anna Jin",
+      "company": "Samsung"
+    }
+  ]
+}

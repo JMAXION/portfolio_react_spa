@@ -1,0 +1,70 @@
+{
+  "buttonList": [
+    {
+      "className": "All",
+      "category": 8
+    },
+    {
+      "className": "Front-end",
+      "category": 4
+    },
+    {
+      "className": "Back-end",
+      "category": 2
+    },
+    {
+      "className": "Mobile",
+      "category": 2
+    }
+  ],
+  "projectList": [
+    {
+      "image": "./img/projects/project1.webp",
+      "meta": "project1",
+      "number": "project 1",
+      "desc": "Clone Coding with HTML, CSS"
+    },
+    {
+      "image": "./img/projects/project2.webp",
+      "meta": "project2",
+      "number": "project 2",
+      "desc": "Clone Coding with HTML, CSS"
+    },
+    {
+      "image": "./img/projects/project3.webp",
+      "meta": "project3",
+      "number": "project 3",
+      "desc": "Clone Coding with HTML, CSS"
+    },
+    {
+      "image": "./img/projects/project4.webp",
+      "meta": "project4",
+      "number": "project 4",
+      "desc": "Clone Coding with HTML, CSS"
+    },
+    {
+      "image": "./img/projects/project5.webp",
+      "meta": "project5",
+      "number": "project 5",
+      "desc": "Clone Coding with HTML, CSS"
+    },
+    {
+      "image": "./img/projects/project6.webp",
+      "meta": "project6",
+      "number": "project 6",
+      "desc": "Clone Coding with HTML, CSS"
+    },
+    {
+      "image": "./img/projects/project7.webp",
+      "meta": "project7",
+      "number": "project 7",
+      "desc": "Clone Coding with HTML, CSS"
+    },
+    {
+      "image": "./img/projects/project8.webp",
+      "meta": "project8",
+      "number": "project 8",
+      "desc": "Clone Coding with HTML, CSS"
+    }
+  ]
+}
